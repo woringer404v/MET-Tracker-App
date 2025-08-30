@@ -54,7 +54,7 @@ Since this app is not downloaded from the Google Play Store, you may need to ena
 
 ## The Machine Learning Model
 
-- **Final model:** `personal_augmented_model.pkl`  
+- **Final model:** `final_model.pkl`  
 - **Algorithm:** Random Forest Classifier  
 - **Training data:** Exclusively on a **personalized** dataset collected by the developer (to match device-specific sensor characteristics and user movement patterns).  
 - **Features:** 19 engineered features derived from **windowed accelerometer** data, augmented via **Jittering**, **Scaling**, and **Rotation** to increase robustness.
@@ -71,7 +71,7 @@ The full training process is reproducible. The repository includes two Python sc
   Trains a model on raw, personally collected data **without** augmentation. It follows a UCI-inspired pipeline: trimming, smoothing, windowing, and feature extraction. Useful for a baseline metric.
 
 - `train_augmented.py` — **Final Model**  
-  Generates `personal_augmented_model.pkl`. Implements the full data pipeline with augmentation (**Jittering**, **Scaling**, **Rotation**) for a more robust and generalized model.
+  Generates `final_model.pkl`. Implements the full data pipeline with augmentation (**Jittering**, **Scaling**, **Rotation**) for a more robust and generalized model.
 
 ### How to Run the Training
 
